@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block title %}
+    Homepage - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1>Hello World!</h1>
+    <p>I am a basic website.</p>
+    <p>There are {{ number }} dog{{ number|pluralize }}!</p>
+{% endblock content %}
