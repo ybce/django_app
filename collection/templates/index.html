@@ -5,7 +5,8 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Hello World!</h1>
-    <p>I am a basic website.</p>
-    <p>My name is {{ thing }}</p>
+   {% for game in games %}
+    <h2>{{ game.name }}</h2>
+    <p>{{ game.description }}</p>
+    {% endfor %}
 {% endblock content %}
