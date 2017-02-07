@@ -5,8 +5,12 @@
 {% endblock title %}
 
 {% block content %}
-   {% for game in games %}
-    <h2>{{ game.name }}</h2>
+    {% for game in games %}
+    <h2>
+        <a href="{% url 'thing_detail' slug=game.slug %}">
+            {{ game.name }}
+        </a>
+    </h2>
     <p>{{ game.description }}</p>
     {% endfor %}
 {% endblock content %}
