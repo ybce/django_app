@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ game.name }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1>{{ game.name }}</h1>
+    <p>{{ game.description }}</p>
+    <a href="{% url 'edit_game' slug=game.slug %}" >Edit Me!</a>
+{% endblock content %}
